@@ -6,7 +6,7 @@ Compile-time Java API for Pumpkin plugin development. The stub provides the Java
 
 | Component | Version |
 |---|---|
-| Pumpkin Stub | 0.1.0 |
+| Pumpkin Stub | 0.1.1 |
 | Java | 21 |
 | Pumpkin Kotlin/Wasm API | 0.1.2 |
 | Pumpkin plugin WIT | `pumpkin:plugin@0.1.0` (synchronous) |
@@ -18,7 +18,7 @@ The stub is a development contract for the synchronous v0.1 API. It does not imp
 Use the JAR published in the GitHub release:
 
 ```text
-pumpkin-stub-0.1.0.jar
+pumpkin-stub-0.1.1.jar
 ```
 
 For local development, publish the artifact to Maven Local:
@@ -36,7 +36,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.j2kt:pumpkin-stub:0.1.0")
+    implementation("dev.j2kt:pumpkin-stub:0.1.1")
 }
 ```
 
@@ -73,7 +73,7 @@ Compile the source against the stub, then pass it to the J2KT translator:
 ```bash
 java -jar j2kt-pumpkin-0.1.0-all.jar \
   --target pumpkin \
-  --classpath pumpkin-stub-0.1.0.jar \
+  --classpath pumpkin-stub-0.1.1.jar \
   --out generated \
   path/to/java-sources
 ```
@@ -104,8 +104,8 @@ Requirements:
 Artifacts:
 
 ```text
-build/libs/pumpkin-stub-0.1.0.jar
-build/libs/pumpkin-stub-0.1.0-sources.jar
+build/libs/pumpkin-stub-0.1.1.jar
+build/libs/pumpkin-stub-0.1.1-sources.jar
 ```
 
 ## Releases
