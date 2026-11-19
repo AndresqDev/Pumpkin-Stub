@@ -36,6 +36,12 @@ public class World {
         public Mob asMob() {
             return null;
         }
+
+        public void teleport(Position position, World world) {
+        }
+
+        public void remove() {
+        }
     }
 
     public static class LivingEntity {
@@ -150,5 +156,30 @@ public class World {
 
     public Entity spawnEntity(EntityTypes.EntityType type, Position position) {
         return new Entity();
+    }
+
+    public int getBlockStateId(BlockPos position) {
+        return 0;
+    }
+
+    public void setBlockStateId(BlockPos position, int stateId) {
+    }
+
+    public void setBlockByName(BlockPos position, String block) {
+    }
+
+    public void spawnParticle(Particles.Particle particle, Position position,
+                              Position offset, int count, double speed) {
+    }
+
+    public void playSound(Sounds.Sound sound, Sounds.SoundCategory category,
+                          Position position, float volume, float pitch) {
+    }
+
+    public void playCustomSound(String sound, Sounds.SoundCategory category,
+                                Position position, float volume, float pitch) {
+    }
+
+    public void createExplosion(Position position, float power, boolean createFire) {
     }
 }

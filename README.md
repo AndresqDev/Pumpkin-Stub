@@ -6,7 +6,7 @@ Compile-time Java API for Pumpkin plugin development. The stub provides the Java
 
 | Component | Version |
 |---|---|
-| Pumpkin Stub | 0.1.1 |
+| Pumpkin Stub | 0.2.0 |
 | Java | 21 |
 | Pumpkin Kotlin/Wasm API | 0.1.2 |
 | Pumpkin plugin WIT | `pumpkin:plugin@0.1.0` (synchronous) |
@@ -18,7 +18,7 @@ The stub is a development contract for the synchronous v0.1 API. It does not imp
 Use the JAR published in the GitHub release:
 
 ```text
-pumpkin-stub-0.1.1.jar
+pumpkin-stub-0.2.0.jar
 ```
 
 For local development, publish the artifact to Maven Local:
@@ -36,7 +36,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.j2kt:pumpkin-stub:0.1.1")
+    implementation("dev.j2kt:pumpkin-stub:0.2.0")
 }
 ```
 
@@ -73,7 +73,7 @@ Compile the source against the stub, then pass it to the J2KT translator:
 ```bash
 java -jar j2kt-pumpkin-0.1.2-all.jar \
   --target pumpkin \
-  --classpath pumpkin-stub-0.1.1.jar \
+  --classpath pumpkin-stub-0.2.0.jar \
   --out generated \
   path/to/java-sources
 ```
@@ -83,6 +83,8 @@ java -jar j2kt-pumpkin-0.1.2-all.jar \
 - Plugin lifecycle and metadata.
 - Logging, text components, players, servers, worlds, and positions.
 - Events, permissions, commands, tasks, IPC, and command argument registration through the compatibility layer.
+- World particles, custom sounds, block state writes, explosions, and entity teleport/removal.
+- Display entities, including block, item, and text displays.
 - Boss bars, GUIs, screens, inventories, items, scoreboards, and teams.
 - Bedrock forms and Java Edition dialogs.
 - Recipes, datapacks, enchantments, display entities, blocks, mobs, and AI goals.
@@ -110,8 +112,8 @@ Requirements:
 Artifacts:
 
 ```text
-build/libs/pumpkin-stub-0.1.1.jar
-build/libs/pumpkin-stub-0.1.1-sources.jar
+build/libs/pumpkin-stub-0.2.0.jar
+build/libs/pumpkin-stub-0.2.0-sources.jar
 ```
 
 ## Releases
@@ -132,8 +134,8 @@ The tag must match the `version` value in `build.gradle`.
 Publish a release with:
 
 ```bash
-git tag v0.1.1
-git push origin v0.1.1
+git tag v0.2.0
+git push origin v0.2.0
 ```
 
 ## Limitations
