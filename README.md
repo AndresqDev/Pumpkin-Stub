@@ -71,7 +71,7 @@ public final class ExamplePlugin extends PumpkinPlugin {
 Compile the source against the stub, then pass it to the J2KT translator:
 
 ```bash
-java -jar j2kt-pumpkin-0.1.2-all.jar \
+java -jar j2kt-pumpkin-0.1.4-all.jar \
   --target pumpkin \
   --classpath pumpkin-stub-0.2.0.jar \
   --out generated \
